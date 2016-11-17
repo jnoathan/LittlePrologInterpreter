@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Little Prolog</string>
+    <string name="queryQ">\?-</string>
+    <string name="query1">\?</string>
+</resources>

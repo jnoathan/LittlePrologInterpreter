@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.user.assignment5.MainActivity"
+    android:background="#bcd1f6">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#bcd1f6"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:id="@+id/resetButton"
+            android:textSize="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/instructionButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instruction"
+            android:id="@+id/instructionButton"
+            android:textSize="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fcfcfc"
+            android:visibility="gone"
+            android:id="@+id/query"
+            android:layout_marginStart="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/queryQ"
+                android:id="@+id/textView"
+                android:layout_below="@+id/searchQueryBtn"
+                android:layout_alignParentStart="true"
+                android:textSize="20dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText3"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toEndOf="@+id/textView2"
+                android:textSize="8dp"
+                android:enabled="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="("
+                android:id="@+id/textView2"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_toEndOf="@+id/editText3"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:layout_alignTop="@+id/editText3"
+                android:layout_toEndOf="@+id/textView2"
+                android:textSize="8dp"
+                android:enabled="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")."
+                android:id="@+id/textView4"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_toEndOf="@+id/editText4"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:visibility="visible"
+            android:id="@+id/predicate"
+            android:layout_marginEnd="22dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/resetButton">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/predicateInput"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_toEndOf="@+id/textView2"
+                android:textSize="8dp"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="("
+                android:id="@+id/textView7"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_toEndOf="@+id/predicateInput"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/constantInput"
+                android:layout_alignTop="@+id/predicateInput"
+                android:layout_toEndOf="@+id/textView7"
+                android:textSize="8dp"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")."
+                android:id="@+id/textView10"
+                android:layout_alignTop="@+id/textView7"
+                android:layout_toEndOf="@+id/constantInput"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+        </TableRow>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#d7e2f7"
+        android:id="@+id/dropTarget"
+        android:visibility="visible"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="57dp"
+            android:layout_height="40dp"
+            android:text="Search Query"
+            android:id="@+id/searchQueryBtn"
+            android:textSize="6dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="Run"
+            android:id="@+id/runButton"
+            android:textSize="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/searchQueryBtn" />
+
+        <RelativeLayout
+            android:layout_width="230dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/runButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="41dp"
+            android:background="#dfdddd"
+            android:visibility="gone"
+            android:id="@+id/Popup">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please enter the predicate and constants first before dragging."
+                android:id="@+id/Message"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="OK"
+                android:id="@+id/okButton"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="Save"
+            android:id="@+id/saveButton"
+            android:textSize="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="Load"
+            android:id="@+id/loadButton"
+            android:textSize="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/saveButton"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/scrollView2"
+        android:background="#ffffff"
+        android:fillViewport="false"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dropTarget" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/outputText" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/runButton"
+        android:layout_toStartOf="@+id/runButton"
+        android:layout_alignParentEnd="true"
+        android:background="#bcd1f6"
+        android:id="@+id/homePage"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Welcome to LittleProlog v0.1!"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="31dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start LittleProlog v0.1"
+            android:id="@+id/startProlog"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instruction"
+            android:id="@+id/instructionHome"
+            android:layout_below="@+id/startProlog"
+            android:layout_alignStart="@+id/startProlog"
+            android:layout_alignEnd="@+id/startProlog" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit LittleProlog v.01"
+            android:id="@+id/exit"
+            android:layout_below="@+id/instructionHome"
+            android:layout_alignStart="@+id/instructionHome"
+            android:layout_alignEnd="@+id/instructionHome" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Query search instruction"
+            android:id="@+id/qSearchButton"
+            android:textSize="10dp"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/textView3" />
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="EXIT"
+            android:id="@+id/exitInstruction"
+            android:textSize="10dp"
+            android:visibility="gone"
+            android:layout_alignTop="@+id/qSearchButton"
+            android:layout_alignStart="@+id/exit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/predicateInstructionPage"
+        android:background="#bcd1f6"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Creating a predicate"
+            android:id="@+id/textView6"
+            android:layout_marginTop="28dp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="INSTRUCTION"
+            android:id="@+id/textView5"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="25dp"
+            android:textColor="#ff0000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Before creating a predicate, drag the predicate block and drop it to the drop target. Insert the name of the predicate and the constant(s) you wish to create, and then click &quot;RUN&quot; button to execute. Once executed, the output will display on the output consule below"
+            android:id="@+id/textView8"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/queryInstructionPage"
+        android:layout_alignParentTop="true"
+        android:background="#bcd1f6"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Query search can only be performed if there are predicates created or stored in the database. Before performing a query search, drag the query block and drop it to the drop target. Insert the name of the predicate and the constant(s)/variable(s) you wish to search, and then click &quot;RUN&quot; to execute. Once executed, the output will display &quot;true&quot; or &quot;false&quot; on the output console below"
+            android:id="@+id/textView11"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Query search"
+            android:id="@+id/textView9"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_above="@+id/textView11"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="INSTRUCTION"
+            android:id="@+id/textView12"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ff0000"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#bcd1f6"
+        android:id="@+id/metaInfoPage"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Author:"
+            android:id="@+id/textView13"
+            android:layout_above="@+id/authorText"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Email:"
+            android:id="@+id/textView14"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Description:"
+            android:id="@+id/textView15"
+            android:layout_marginTop="37dp"
+            android:layout_below="@+id/emailText"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailText"
+            android:background="#ffffff"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView14"
+            android:layout_alignParentLeft="true"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/descriptionText"
+            android:background="#ffffff"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView15"
+            android:layout_alignParentLeft="true"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/authorText"
+            android:background="#ffffff"
+            android:layout_marginBottom="37dp"
+            android:layout_above="@+id/textView14"
+            android:layout_alignParentStart="true"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create new program"
+            android:id="@+id/createNewButton"
+            android:layout_below="@+id/descriptionText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="New LittleProlog Program"
+            android:id="@+id/textView16"
+            android:layout_below="@+id/homePage"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
