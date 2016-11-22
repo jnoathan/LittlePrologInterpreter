@@ -4,7 +4,7 @@ An interactive Android application for high-school students to learn the Prolog 
 Overview of the product and project:
 
 LittleProlog is a friendly and interactive Android application that is targeted at high school students and teachers to assist and improve the learning experience of learning the fundamentals of the Prolog programming language. 
-With it’s interactive Graphical User Interface, users would be able to code or to create predicates with constants using the Drag ‘n Drop feature, where it makes this application very highly interactive, so that the students who do not have any programming language are able to learn them without any difficulty, allowing users of the application to be able to learn and grow at their own pace.
+With its interactive Graphical User Interface, users would be able to code or to create predicates with constants using the Drag ‘n Drop feature, where it makes this application very highly interactive, so that the students who do not have any programming language are able to learn them without any difficulty, allowing users of the application to be able to learn and grow at their own pace.
 
 Team members: 
 
